@@ -17,8 +17,8 @@ e_name -> 字串 -> 不可以重覆 */
 
 CREATE TABLE IF NOT EXISTS TRA_station_code (
     id SERIAL PRIMARY KEY,
-    code VARCHAR(4) NOT NULL,
-	name VARCHAR(10) NOT NULL UNIQUE,
-	e_name VARCHAR(30),
+    code VARCHAR(10) NOT NULL UNIQUE,
+	name VARCHAR(20) UNIQUE,
+	e_name VARCHAR(50) UNIQUE
 	
 );
