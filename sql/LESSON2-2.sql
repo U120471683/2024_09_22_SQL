@@ -6,5 +6,5 @@ CREATE TABLE IF NOT EXISTS hospital (
     市話	VARCHAR(15) ,
     分機	VARCHAR(7) ,
     聯絡人	VARCHAR(7) ,
-    地址	VARCHAR(50) ,
+    地址	VARCHAR(50) 
 );
