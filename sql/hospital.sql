@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS "hospital" (
 	"聯絡人"	TEXT,
 	"地址"	TEXT
 );
+
 INSERT INTO "hospital" VALUES (1,'臺北市','國立臺灣大學醫學院附設醫院','(02)23123456','67278','魏小姐','臺北市常德街1號(環境職業醫學部)');
 INSERT INTO "hospital" VALUES (2,'臺北市','臺北榮民總醫院','(02)28757364','533','黃小姐','臺北市北投區石牌路201號');
 INSERT INTO "hospital" VALUES (3,'新北市','國泰醫療財團法人汐止國泰綜合醫院','(02)26482121','3676','李先生','新北市汐止區建成路59巷2號');
