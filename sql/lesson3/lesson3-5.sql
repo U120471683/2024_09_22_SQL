@@ -38,3 +38,14 @@ WHERE name LIKE '小%';
 
 SELECT *
 FROM student;
+
+/*UPDATE SET WHERE*/
+UPDATE student
+SET major = '英語文學'
+WHERE major = '英語'
+RETURNING * ;
+
+UPDATE student
+SET  major = '生化'
+WHERE major = '生物' OR major = '化學'
+RETURNING * ;
