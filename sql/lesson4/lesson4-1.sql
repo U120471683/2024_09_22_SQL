@@ -30,3 +30,17 @@ INSERT INTO enrollments (student_id, course_name, grade) VALUES
     (4, '作業系統', 'A-'),
     (5, '網頁設計', 'B+'),
     (5, '資料庫系統', 'A-');
+	
+SELECT * 
+FROM enrollments 
+join students 
+on enrollments.student_id=students.student_id;
+
+SELECT studets.student_id,
+		name,
+		age, 
+		course_name,
+		grade
+FROM enrollments 
+join students 
+on enrollments.student_id=students.student_id;
