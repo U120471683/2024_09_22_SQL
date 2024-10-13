@@ -26,3 +26,16 @@ SELECT (first_name || ' ' || last_name) as full_name, SUM(amount) as 總合
 FROM payment p JOIN customer c ON p.customer_id = c.customer_id
 GROUP BY full_name
 ORDER BY 總合 DESC;
+
+SELECT staff_id,customer_id	,	
+		SUM(amount) AS 金額總合
+FROM payment
+GROUP BY staff_id , customer_id
+ORDER BY customer_id ASC ;
+
+
+SELECT * FROM payment
+
+SELECT * FROM customer
+ 
+
