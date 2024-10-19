@@ -8,17 +8,17 @@ cap = cv2.VideoCapture(0)
 
 # 定義按鈕回調函數
 def open_door():
-    st.session_state['door_status'] = '開'
+    st.session_state['door_status'] = '電動門開啟中'
 
 def close_door():
-    st.session_state['door_status'] = '關'
+    st.session_state['door_status'] = '電動門關閉中'
 
 def stop_door():
-    st.session_state['door_status'] = '停'
+    st.session_state['door_status'] = '電動門已停止運行'
 
 # 初始化會話狀態
 if 'door_status' not in st.session_state:
-    st.session_state['door_status'] = '停'
+    st.session_state['door_status'] = '電動門已停止運行'
 
 # 創建三列佈局
 col1, col2, col3 = st.columns(3)
