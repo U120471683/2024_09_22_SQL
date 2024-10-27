@@ -1,3 +1,5 @@
+
+
 import streamlit as st
 import psycopg2
 conn = psycopg2.connect(
@@ -12,6 +14,5 @@ rows = cur.fetchall()
 names = []
 for row in rows:
     names.append(row[2])
-names
-
+    
 st.write(names)
