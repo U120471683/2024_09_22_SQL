@@ -20,4 +20,7 @@ names
 
 st.write("您的最愛是:", option)   
 
+st.write('# :heart: Hello ! 徐老師 國堂 ! :smiley: ')
+st.write('# :sunglasses: 欢迎来到 Streamlit 应用  :tada: ')
+st.write('# :fire: 希望你喜欢这个应用 :trophy: ')
 
