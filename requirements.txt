@@ -5,3 +5,4 @@ pandas-datareader  # DataReader
 Pyarrow            # Apache Arrow
 yfinance           # Yahoo finance API
 requests           # HTTP library
+python-dotenv      # .env file
