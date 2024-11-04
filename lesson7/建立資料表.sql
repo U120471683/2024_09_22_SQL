@@ -1,4 +1,3 @@
-
 CREATE TABLE IF NOT EXISTS 市場(
 	name VARCHAR(20),
 	country VARCHAR(20),
