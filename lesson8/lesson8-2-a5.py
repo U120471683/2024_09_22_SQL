@@ -1,4 +1,3 @@
-
 import streamlit as st
 import psycopg2
 from dotenv import load_dotenv
@@ -9,10 +8,10 @@ load_dotenv()
 @st.cache_resource
 def getData(country:tuple[str])->list[tuple]:
     conn = psycopg2.connect(
-        host=os.environ['HOST1'],
-        database=os.environ['DATABASE1'],
-        user=os.environ['USER1'],
-        password=os.environ['PASSWORD1'])
+            host=os.environ['HOST1'],
+            database=os.environ['DATABASE1'],
+            user=os.environ['USER1'],
+            password=os.environ['PASSWORD1'])
     with conn:
         with conn.cursor() as cursor:
             sql = '''
@@ -29,10 +28,11 @@ def getData(country:tuple[str])->list[tuple]:
 @st.cache_resource
 def get_country():
     conn = psycopg2.connect(
-        host=os.environ['HOST1'],
-        database=os.environ['DATABASE1'],
-        user=os.environ['USER1'],
-        password=os.environ['PASSWORD1'])
+            host=os.environ['HOST1'],
+            database=os.environ['DATABASE1'],
+            user=os.environ['USER1'],
+            password=os.environ['PASSWORD1'])
+    
     with conn:
         with conn.cursor() as cursor:
             sql = '''
@@ -63,5 +63,5 @@ with st.sidebar:
 
 df = pd.DataFrame(getData((default_country,)),columns=['國家','代號','日期','收盤價','成交量'])
 df['收盤價'] = df['收盤價'].astype('float').round(decimals=2)
-st.line_chart(data=df,x='日期',y='收盤價',color='國家')
+df
     

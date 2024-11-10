@@ -1,4 +1,3 @@
-
 import streamlit as st
 import psycopg2
 from dotenv import load_dotenv
@@ -6,7 +5,7 @@ import os
 import pandas as pd
 load_dotenv()
 
-@st.cache_resource
+@st.cache_data
 def getData(country:tuple[str])->list[tuple]:
     conn = psycopg2.connect(
         host=os.environ['HOST1'],
@@ -51,8 +50,7 @@ def user_select():
 st.title('世界大盤分析')
 default_country = '台灣'
 with st.sidebar:    
-    st.title('請選擇股票市場:')
-    
+    st.title('請選擇股票市場:')    
     st.multiselect("請選擇",get_country(),
                     default=default_country,
                     placeholder="請選擇市場",
@@ -64,4 +62,5 @@ with st.sidebar:
 df = pd.DataFrame(getData((default_country,)),columns=['國家','代號','日期','收盤價','成交量'])
 df['收盤價'] = df['收盤價'].astype('float').round(decimals=2)
 st.line_chart(data=df,x='日期',y='收盤價',color='國家')
+
     
