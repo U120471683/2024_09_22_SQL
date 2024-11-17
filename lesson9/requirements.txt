@@ -1,0 +1,8 @@
+psycopg2-binary          # PostgreSQL
+streamlit                # Streamlit
+pandas                   # Data manipulation 資料調處語言（Data Manipulation Language, DML）
+pandas-datareader        # DataReader
+Pyarrow                  # Apache Arrow
+yfinance                 # Yahoo finance API
+requests                 # HTTP library
+python-dotenv=1.0.1      # .env file
